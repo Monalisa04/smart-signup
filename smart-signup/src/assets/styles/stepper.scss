@@ -1,0 +1,102 @@
+.stepper {
+	background-color: none;
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+
+	.step {
+		display: table-cell;
+		padding: 15px;
+		position: relative;
+
+		.circle {
+			background-color: #999;
+			border-radius: 50%;
+			color: $color-white;
+			height: 30px;
+			line-height: 30px;
+			margin: 0 auto;
+			text-align: center;
+			width: 30px;
+		}
+
+		.line-left {
+			border-top: 1px solid #ddd;
+			height: 1px;
+			left: 0;
+			margin-right: 20px;
+			position: absolute;
+			right: 50%;
+			top: 29px;
+		}
+
+		.title {
+			margin-top: .5rem;
+			text-align: center;
+		}
+
+		.line-right {
+			border-top: 1px solid #ddd;
+			height: 1px;
+			left: 50%;
+			margin-left: 20px;
+			position: absolute;
+			right: 0;
+			top: 29px;
+		}
+
+		&:last-child {
+			&:active {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			.line-right {
+				display: none;
+			}
+		}
+
+		&:first-child {
+			&:active {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+
+			.line-left {
+				display: none;
+			}
+		}
+	}
+
+	.step.active {
+		.circle {
+			background-color: $color-secondary;
+		}
+
+		.line-left {
+			border-top: 1px solid $color-secondary;
+		}
+
+		.title {
+			color: $color-secondary;
+		}
+	}
+
+	.step.done {
+		.circle {
+			background-color: $color-secondary;
+		}
+
+		.title {
+			color: $color-secondary;
+		}
+
+		.line-right {
+			border-top: 1px solid $color-secondary;
+		}
+
+		.line-left {
+			border-top: 1px solid $color-secondary;
+		}
+	}
+}
