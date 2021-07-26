@@ -23,8 +23,11 @@ https://master.d3k3jxmssqja9a.amplifyapp.com/
 3. Start the application using
    ### `npm start`
 
-4.	The application should now be running at 
+4. The application should now be running at 
     http://localhost:3000/
+    
+5. Tests for the application can be run using
+   ### `npm test`
 
 
 ### Overview and details of code can be found in the document - Smart Signup.docx
