@@ -6,7 +6,8 @@ import * as validationHelper from "../../helpers/validation";
 
 describe("submit a formik form", () => {
   it("with first name", async () => {
-    const onFormSubmit = jest.fn();
+    const formSubmitHandler = jest.fn();
+	const formCancelHandler = jest.fn();
 
     const formFields = [
       {
@@ -70,7 +71,8 @@ describe("submit a formik form", () => {
         initialValues={initialValues}
         fields={formFields}
         validationHandler={validate}
-        submitHandler={onFormSubmit}
+        submitHandler={formSubmitHandler}
+		cancelHandler={formCancelHandler}
       />
     );
 
@@ -78,10 +80,10 @@ describe("submit a formik form", () => {
     userEvent.type(screen.getByLabelText(/Role:/i), "");
     userEvent.type(screen.getByLabelText(/Password:/i), "1Qqwweded");
     userEvent.type(screen.getByLabelText(/Email:/i), "abc@test.com");
-    userEvent.click(screen.getByRole("button", { name: /submit/i }));
+    userEvent.click(screen.getByRole("button", { name: /next/i }));
 
     await waitFor(() => {
-        expect(onFormSubmit).toHaveBeenCalled();
+        expect(formSubmitHandler).toHaveBeenCalled();
     });
   });
 });
