@@ -10,6 +10,7 @@ Smart Signup is a web application that allows a user to provide his details in o
   
 ## Demo
 The app has been published here for easy viewing
+https://master.d3k3jxmssqja9a.amplifyapp.com/
 
 ## Installation Steps
 
