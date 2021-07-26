@@ -5,6 +5,9 @@ import { UserContext } from '../user-signup/user-signup';
 
 const UserPrivacyForm = () => {
 	const { dispatch } = useContext(UserContext);
+	/**
+	 * Form fields for the privacy form
+	 */
 	const formFields = [
 		{
 			type: FORM_FIELD_TYPES.CHECKBOX,

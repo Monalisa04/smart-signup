@@ -1,7 +1,6 @@
 import UserInfoForm from '../features/user-info-form/user-info-form';
 import UserPrivacyForm from '../features/user-privacy-form/user-privacy-form';
 import SignupSuccess from '../features/signup-success/signup-success';
-import { FORM_FIELD_TYPES } from '../constants/constants';
 export const SIGNUP_PAGES = [
 	{
 		identifier: 'PAGE_USER_INFO',
