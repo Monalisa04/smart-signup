@@ -48,16 +48,16 @@ const FormikForm = ({
 				</div>
 				<div className="d-flex justify-content-end">
 					<Button
-						label="Cancel"
-						title="Cancel"
+						label="Back"
+						title="Back"
 						clickHandler={cancelHandler}
-						classes="btn btn-secondary btn mx-1"
+						classes="btn-secondary mx-1"
 					/>
 					<Button
 						label="Next"
 						title="Next"
 						type="submit"
-						classes="btn btn-primary mx-11"
+						classes="btn-primary mx-1"
 					/>
 				</div>
 			</Form>
